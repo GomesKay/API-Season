@@ -1,0 +1,42 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Catalog {
+  id               String @id @default(uuid())
+  title            String
+  description      String? @db.Text
+  gender           Gender
+  year_of_release  Int
+  seasons          Season[]
+  created_at       DateTime @default(now())
+  updated_at       DateTime @updatedAt
+}
+
+enum Gender {
+  ACAO
+  ANIMACAO
+  AVENTURA
+  COMEDIA
+  DOCUMENTARIO
+  DRAMA
+  FICCAO_CIENTIFICA
+  ROMANCE
+  SUSPENSE
+  TERROR
+}
+
+model Season {
+  id                String @id @default(uuid())
+  number           Int
+  episodes         Int
+  catalog          Catalog @relation(fields: [catalogId], references: [id], onDelete: Cascade)
+  catalogId        String
+  created_at       DateTime @default(now())
+  updated_at       DateTime @updatedAt
+}

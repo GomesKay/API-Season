@@ -1,0 +1,30 @@
+{
+  "name": "api-season",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsx watch src/http/server.ts",
+    "test": "vitest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@biomejs/biome": "1.9.3",
+    "@types/node": "^22.7.4",
+    "@types/supertest": "^6.0.2",
+    "prisma": "^5.20.0",
+    "supertest": "^7.0.0",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.19.1",
+    "typescript": "^5.6.2",
+    "vitest": "^2.1.3"
+  },
+  "dependencies": {
+    "@prisma/client": "^5.20.0",
+    "fastify": "^5.0.0",
+    "postgres": "^3.4.4",
+    "zod": "^3.23.8"
+  }
+}
