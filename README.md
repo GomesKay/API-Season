@@ -6,15 +6,15 @@
 
 <div align="center">
 
-  | Rotas | Descrição |
-  | --- | --- |
-  | `GET` | /catalog - Retornar todo o catálogo |
-  | `GET` | /catalog/:id - Retorna uma série específica |
-  | `POST` | /catalog - Cadastrar uma nova série |
-  | `POST` | /catalog/:catalogId/season - Cadastra uma nova temporada |
-  | `PUT` | /catalog/:id - Atualiza uma série específica |
-  | `PUT` | /catalog/:catalogId/season/:id - Atualiza a temporada de uma série específica |
-  | `DELETE` | /catalog/:id - Deletar uma série específica |
+  | HTTP | Rotas | Descrição |
+  | --- | --- | --- |
+  | `GET` | /catalog | Retornar todo o catálogo |
+  | `GET` | /catalog/:id | Retorna uma série específica |
+  | `POST` | /catalog | Cadastrar uma nova série |
+  | `POST` | /catalog/:catalogId/season | Cadastra uma nova temporada |
+  | `PUT` | /catalog/:id | Atualiza uma série específica |
+  | `PUT` | /catalog/:catalogId/season/:id | Atualiza a temporada de uma série específica |
+  | `DELETE` | /catalog/:id | Deletar uma série específica |
   
 </div>
 
