@@ -7,12 +7,12 @@ import { updateSerie } from "../routes/update-serie"
 import { updateSeason } from "../routes/update-season"
 import { deleteSerie } from "../routes/delete-serie"
 
-export function routes(app: FastifyInstance) {
-  app.register(createSerie)
-  app.register(createSeason)
-  app.register(getSeries)
-  app.register(getSerie)
-  app.register(updateSerie)
-  app.register(updateSeason)
-  app.register(deleteSerie)
+export async function routes(app: FastifyInstance) {
+  await app.register(createSerie)
+  await app.register(createSeason)
+  await app.register(getSeries)
+  await app.register(getSerie)
+  await app.register(updateSerie)
+  await app.register(updateSeason)
+  await app.register(deleteSerie)
 }

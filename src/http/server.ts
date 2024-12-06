@@ -5,9 +5,14 @@ export const app = fastify()
 
 app.register(routes)
 
-// Se não estiver em ambiente de testes, escuta na porta 3333
+// Escuta na porta 3333, exceto em ambientes de teste
 if (process.env.NODE_ENV !== "test") {
-  app.listen({ port: 3333 }).then(() => {
-    console.log("HTTP Server Running!")
-  })
+  app
+    .listen({ port: 3333 })
+    .then(() => {
+      console.log("HTTP Server Running!")
+    })
+    .catch(error => {
+      console.error("Error Starting Server: ", error)
+    })
 }
